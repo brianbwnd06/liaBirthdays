@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Kalam:wght@300;400;700&family=Lavishly+Yours&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=Satisfy&family=Send+Flowers&family=Viga&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #383838;
+}
+
+.blob-1{
+    position: absolute;
+    transform: scale(2.4);
+    right: -130px;
+    top: -10px;
+}
+.blob-2{
+    position: absolute;
+    transform: scale(3);
+    left: -10px;
+    bottom: -10px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    margin-top: -50px;
+    overflow: hidden;
+}
+
+.card-box{
+    width: 90%;
+    height: max-content;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-right: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    box-shadow: inset 2px 3px 10px rgba(0,0,0,0.2),
+    0 10px 50px rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card-box.active{
+    left: -100%;
+}
+.text-top {
+    margin-bottom: 20px;
+    line-height: 0.8;
+    margin-top: 20px;
+}
+.text-top h2{
+    font-size: 35px;
+    text-transform: capitalize;
+    font-family:Kalam;
+    color: #ffff;
+    text-shadow: 0 0 10px white,
+    0 0 60px rgb(0, 162, 255);
+   text-align: center;
+
+}
+
+.text-btm{
+    text-align: center;
+    line-height: 1.3;
+    color: #fff;
+    margin-top: 10px;
+    text-shadow: 0 0 10px white,
+    0 0 60px rgb(0, 162, 255);
+    margin-bottom: 10px;
+}
+.text-btm p{
+    font-size: 13px;
+}
+.text-btm h3{
+    font-weight: 600;
+}
+
+
+
+.slider-frame{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 40px white,
+    0 0 60px rgb(0, 162, 255,0.7);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+@-webkit-keyframes slide_animation{
+    0%{left: -800px;}
+    15%{left: -600px;}
+    30%{left: -400px;}
+    45%{left: -200px;}
+    60%{left: 0px;}
+    75%{left: 200px;}
+    100%{left: 400px;}
+    
+}
+
+.slide-image{
+    width: 1600px ;
+    height: 200px;
+    margin: 0 0 0 -400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.img-container{
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 50%;
+  
+}
+
+img{
+    width: 200px;
+    height: 200px;
+   
+    transform: scale(1);
+    transition: 0.6s ease-in-out;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+.img-container:hover img{
+    transform: scale(1.2);
+}
+
+.klik-me{
+    background-color: rgb(162, 0, 255);
+    border: none;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 4px;
+    text-shadow: 0 0 10px white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/* HARAPAN */
+
+.harapan{
+    width: 90%;
+    height: max-content;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-right: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    box-shadow: inset 2px 3px 10px rgba(0,0,0,0.2),
+    0 10px 50px rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 200;
+    left: 100%;
+    transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.harapan.active{
+    left: 20px;
+}
+.swiper {
+    width: 240px;
+    height: 320px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #666;
+    border-right: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    box-shadow: inset 2px 3px 10px rgba(0,0,0,0.2);
+    font-family: Patrick hand;
+    background-image: url(img/bgsld.jpg);
+    background-size: cover;
+    background-position-y: -45px;
+  }
+
+  .swiper-slide:nth-child(1n) {
+    background-color: rgb(255, 255, 255);
+  }
+  .swiper-slide h2{
+      font-size: 22px;
+      width: 100px;
+      line-height: 1.3;
+      color: #fff;
+  }
+  .swiper-slide h1{
+      font-size: 40px;
+      width: 100px;
+      line-height: 1.3;
+      color: #fff;
+      text-align: center;
+  }
+  .swiper-slide h3{
+      font-size: 20px;
+      width: 100px;
+      line-height: 1.3;
+      color: #fff;
+      text-align: center;
+  }
+  .cover{
+      font-size: 35px;
+      text-align: center;
+      line-height: 0.8;
+      font-family: Poppins;
+      text-transform: uppercase;
+      color: #333;
+     
+      background-image: url(img/bgSd.png);
+      background-size: cover;
+  }
+  .cover p{
+      margin-top: 20px;
+  }
+/* 
+  .swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+
+  .swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+
+  .swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+
+  .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+
+  .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+
+  .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+
+  .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  } */
